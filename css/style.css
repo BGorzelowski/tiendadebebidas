@@ -297,9 +297,10 @@ form label {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 
 /* HEADER */
+
 .top-header {
     flex-direction: column;
     text-align: center;
@@ -314,7 +315,7 @@ form label {
 .top-header h1 {
     margin-left: 0;
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .navbar {
@@ -339,22 +340,49 @@ form label {
     width: 100%;
 }
 
-/*MAIN*/
+/* MAIN */
 
 .banner {
     height: 250px;
 }
 
-.imagenCard {
+/*CARDS */
+.product-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.producto-card,.product-card, .product-grid > div {
     width: 100%;
-    max-width: 250px;
+    max-width: 320px;  
+    margin: 0 auto;    
 }
 
 .product-img {
     height: auto;
 }
 
-/*FOOTER*/
+.imagenCard {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* FOOTER */
 
 .footer-content {
     flex-direction: column;
@@ -370,4 +398,6 @@ form label {
 .payments {
     justify-content: center;
 }
+
 }
+
