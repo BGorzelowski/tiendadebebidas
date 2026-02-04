@@ -1,0 +1,43 @@
+@use "../utilities/variables" as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-navbar;
+    padding: 20px 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+
+a {
+    color: $color-letra;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: .3s;
+
+    &:hover {
+    color: $color-hover;
+    }
+}
+}
+
+.buscador {
+    display: flex;
+    gap: 2px;
+
+input {
+    padding: 8px 12px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+}
+
+button {
+    border-radius: 0 6px 6px 0;
+    border: none;
+    cursor: pointer;
+}
+}

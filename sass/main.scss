@@ -1,0 +1,20 @@
+/* utilities */
+@use "utilities/variables";
+@use "utilities/mixins";
+@use "utilities/animations";
+
+/* base */
+@use "base/reset";
+@use "base/tipografias";
+
+/* layout */
+@use "layout/header";
+@use "layout/navbar";
+@use "layout/principal";
+@use "layout/footer";
+@use "layout/mediaqueries";
+
+/* components */
+@use "components/cards";
+@use "components/buttons";
+@use "components/forms";

@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-box {
+    background: $bg-box;
+    border-radius: $radius;
+    border: 1px solid $color-borde;
+    transition: .3s;
+}
+
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}

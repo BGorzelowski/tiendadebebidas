@@ -1,0 +1,24 @@
+@use "../utilities/variables" as *;
+
+header {
+    background-color: $bg-general;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+
+img {
+    width: 100px;
+    height: 100px;
+  }
+
+h1 {
+    color: $color-letra;
+    margin-left: 20px;
+  }
+}
+

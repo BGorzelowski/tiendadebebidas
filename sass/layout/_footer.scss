@@ -1,0 +1,22 @@
+@use "../utilities/variables" as *;
+
+footer {
+    padding: 40px 60px 20px;
+    background-color: $bg-footer;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.payments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+img {
+    width: 50px;
+}
+}

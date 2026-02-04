@@ -1,0 +1,6 @@
+@use "../utilities/variables" as *;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $color-texto;
+}

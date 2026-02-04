@@ -1,0 +1,19 @@
+@use "../utilities/variables" as *;
+
+%btn-base {
+    padding: 10px 18px;
+    border: none;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn {
+    @extend %btn-base;
+    background: $bg-boton;
+    color: $color-letra;
+
+    &:hover {
+    background: $color-hover;
+  }
+}
