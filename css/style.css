@@ -1,18 +1,246 @@
-/* Error: Undefined mixin.
- *    ,
- * 21 |     @include card-box;
- *    |     ^^^^^^^^^^^^^^^^^
- *    '
- *   sass\components\_cards.scss 21:5  @use
- *   sass\main.scss 18:1               root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 21 \2502      @include card-box;\d\a    \2502      ^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\components\\_cards.scss 21:5  @use\a   sass\\main.scss 18:1               root stylesheet";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+}
+
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.product-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #d0cecc;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  height: 300px;
+  background: #fed18e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.imagenCard {
+  width: 300px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn {
+  background: #918e8e;
+  color: #ffffff;
+}
+.btn:hover {
+  background: #ffb703;
+}
+
+.contact-form {
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+header {
+  background-color: #000000;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+.top-header img {
+  width: 100px;
+  height: 100px;
+}
+.top-header h1 {
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 20px 40px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.menu a:hover {
+  color: #ffb703;
+}
+
+.buscador {
+  display: flex;
+  gap: 2px;
+}
+.buscador input {
+  padding: 8px 12px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+}
+.buscador button {
+  border-radius: 0 6px 6px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+  height: 600px;
+}
+
+.section-title {
+  margin: 60px 0 40px;
+  font-size: 2rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffb703;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+}
+.social img {
+  width: 50px;
+}
+
+.medios-pago {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.medios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.medio img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+footer {
+  padding: 40px 60px 20px;
+  background-color: #f1bd83;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.payments img {
+  width: 50px;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .banner {
+    height: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner {
+    height: 250px;
+  }
+}
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/*# sourceMappingURL=style.css.map */
