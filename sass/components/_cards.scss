@@ -19,6 +19,7 @@
 
 .product-card {
     @include card-box;
+    color: $color-letra;
     display: flex;
     flex-direction: column;
     justify-content: center;
