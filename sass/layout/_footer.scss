@@ -1,22 +1,69 @@
-@use "../utilities/variables" as *;
-
 footer {
-    padding: 40px 60px 20px;
-    background-color: $bg-footer;
+  background: linear-gradient(180deg, #ffb347, #ff8c42);
+  color: #1a1a1a;
+  margin-top: 80px;
+  padding-top: 50px;
 }
+
+
+footer h3 {
+  color: #ffffff;
+}
+
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
 }
+
+.footer-section {
+  flex: 1;
+}
+
+
 
 .payments {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-img {
-    width: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
+
+.payments img {
+  width: 48px;
+  height: auto;
+  opacity: .9;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.payments img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+
+.social img {
+  width: 46px;
+  height: auto;
+}
+
+footer a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+.footer-copy {
+  text-align: center;
+  padding: 18px 10px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  font-size: .9rem;
+  opacity: .85;
+  color: #ffffff;
 }

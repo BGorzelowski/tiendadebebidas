@@ -1,46 +1,96 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
-.productos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    justify-items: center;
-    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 48px;
 }
+
 
 .product-card {
-    @include card-box;
-    color: $color-letra;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #ffd6b3;
+    box-shadow: 0 10px 28px rgba(255,122,0,.15);
 }
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255,122,0,.25);
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1rem;
+}
+
 
 .product-img {
     width: 100%;
-    height: 300px;
-    background: #fed18e;
-    padding: 20px;
-    border-radius: $radius;
-    margin-bottom: 15px;
+    height: 230px;
+    object-fit: cover;
 }
 
-.imagenCard {
-    width: 300px;
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
 }
+
+.card-body h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+    min-height: 48px;
+}
+
+
+
+.price {
+    color: #ff7a00;
+}
+
+
+.card-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.card-actions .btn {
+    flex: 1;
+    padding: 10px 0;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+
+
+.card-actions .primary {
+    background: #ff7a00;
+}
+
+.card-actions .primary:hover {
+    background: #e96d00;
+}
+
 

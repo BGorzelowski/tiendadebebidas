@@ -1,43 +1,30 @@
 @use "../utilities/variables" as *;
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $bg-navbar;
-    padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 40px;
+  background-color: $bg-navbar;
+  flex-wrap: wrap;
 }
-
 .menu {
     list-style: none;
     display: flex;
     gap: 40px;
+}
 
-a {
-    color: $color-letra;
+.menu a {
+    color: white;
     text-decoration: none;
+    font-weight: 600;
     letter-spacing: 1px;
-    transition: .3s;
-
-    &:hover {
-    color: $color-hover;
-    }
-}
+    transition: .25s;
 }
 
-.buscador {
-    display: flex;
-    gap: 2px;
-
-input {
-    padding: 8px 12px;
-    border-radius: 6px 0 0 6px;
-    border: none;
-}
-
-button {
-    border-radius: 0 6px 6px 0;
-    border: none;
-    cursor: pointer;
-}
+.menu a:hover {
+    opacity: .8;
 }
